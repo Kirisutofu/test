@@ -1,33 +1,52 @@
 <?php
 
+	class Number
+	{
+
+		public function __construct( public int $value)
+		{
+			$this->value = $value;
+		
+		}  
+		
+
+		public function putInSquare()
+		{
+
+				$square = $this-> value * $this->value;
+
+				echo $square ."\n";	
+				
+				return $square;
+
+
+		}
+	}
+	
 	$a = 1;
-	$temp_valeur = null;
-	$result = null;
+	$n = null;
 
-	while($a==1){
-
-
-		$valeur = readline('entrez une valeur:');
-
-		if($valeur == $temp_valeur)
+	while ($a==1)
+	{
+		$val = readline('entrez une valeur:');
+		
+		if($val == $n)
 		{
-
-			echo $result ."\n";
+			echo $res."\n";
 		}
-		else
-		{
+		else{
 
-			$result = $valeur * $valeur;
-			echo $result ."\n";
-			$temp_valeur = $valeur;
+			$Num = new Number($val);	
+			$res = $Num -> putInSquare();
+			$n = $val;
+			
 
 		}
-
-
+				
 	}
 
 
-	
+?>	
 
 	
 
